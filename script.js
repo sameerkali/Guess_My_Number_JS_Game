@@ -2,8 +2,8 @@
 // console.log(document.querySelector(".message").textContent="hare it is ");
 
 let score = 20;
-
-var secretNumber = Math.trunc(Math.random() * 21);
+let highScore = 0;
+let secretNumber = Math.trunc(Math.random() * 21);
 console.log(secretNumber);
 console.log('waie toh correct number upper hi hai par Bhaiya BHSDK inspect cheating kene ke lea nhi hota !!!')
 
@@ -46,6 +46,10 @@ document.querySelector('.check').addEventListener(
             document.querySelector('body').style.background = "#60b347";
             document.querySelector('.number').style.width = '30rem';
 
+            if(score > highScore){
+                highScore = score;
+                document.querySelector('.highscore').textContent = highScore;
+            }
         }
 
     });
